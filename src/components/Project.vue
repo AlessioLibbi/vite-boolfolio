@@ -20,6 +20,12 @@ export default {
       <p class="card-text">
         {{ project.description }}
       </p>
+      <p v-if="project.type" class="card-text">{{ project.type.name }}</p>
+      <ul class="list-unstyled">
+        <li class="card-text" v-for="technology in project.technologies">
+          {{ technology.name }}
+        </li>
+      </ul>
       <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a>
     </div>
